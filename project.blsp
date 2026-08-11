@@ -1,0 +1,11 @@
+;; bedit-theme-rose-pine — a Rosé Pine theme PACK for the bedit editor: one hive
+;; plugin package (`:enhances bedit`) contributing THREE themes (Main, Moon, Dawn)
+;; in a single `:themes` vector. Installs at runtime via M-x package-list; all
+;; three appear in M-x theme-select at once. Pure data.
+(project
+  :name "bedit-theme-rose-pine"
+  :version "0.1.0"
+  :description "The Rosé Pine theme pack for bedit — Main, Moon, and Dawn in one plugin (:enhances bedit)."
+  :repository "https://github.com/broodlang/bedit-theme-rose-pine"
+  :enhances {bedit ">= 0.1"}
+  :source-paths ["src"])

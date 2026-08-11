@@ -1,0 +1,29 @@
+(defmodule bedit-theme-rose-pine
+  "The Rosé Pine theme pack for bedit — three variants in one plugin, as pure data. A single
+package can contribute MANY themes: `(bedit-plugin)`'s `:themes` is a vector, and the host
+registers every entry. https://rosepinetheme.com")
+;; ---- the three official variants, mapped onto bedit's 16 roles ---------------
+(def *main*
+  {:base "#191724" :mantle "#1f1d2e" :surface0 "#26233a" :surface1 "#403d52"
+   :surface2 "#524f67" :overlay0 "#6e6a86" :overlay1 "#908caa" :text "#e0def4"
+   :subtext "#908caa" :blue "#31748f" :mauve "#c4a7e7" :green "#9ccfd8"
+   :yellow "#f6c177" :peach "#ebbcba" :red "#eb6f92" :teal "#56949f"})
+
+(def *moon*
+  {:base "#232136" :mantle "#2a273f" :surface0 "#393552" :surface1 "#44415a"
+   :surface2 "#56526e" :overlay0 "#6e6a86" :overlay1 "#908caa" :text "#e0def4"
+   :subtext "#908caa" :blue "#3e8fb0" :mauve "#c4a7e7" :green "#9ccfd8"
+   :yellow "#f6c177" :peach "#ea9a97" :red "#eb6f92" :teal "#56949f"})
+
+(def *dawn*
+  {:base "#faf4ed" :mantle "#fffaf3" :surface0 "#f2e9e1" :surface1 "#dfdad9"
+   :surface2 "#cecacd" :overlay0 "#9893a5" :overlay1 "#797593" :text "#575279"
+   :subtext "#797593" :blue "#286983" :mauve "#907aa9" :green "#56949f"
+   :yellow "#ea9d34" :peach "#d7827e" :red "#b4637a" :teal "#56949f"})
+
+(defn bedit-plugin ()
+  "The contribution: three themes in one `:themes` vector — the pack model. The host folds
+every entry into M-x theme-select, so installing this one package adds all three at once."
+  {:themes [{:name "Rosé Pine" :palette *main*}
+            {:name "Rosé Pine Moon" :palette *moon*}
+            {:name "Rosé Pine Dawn" :palette *dawn*}]})
