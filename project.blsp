@@ -6,7 +6,8 @@
   :name "bedit-theme-rose-pine"
   :version "0.1.2"
   :brood ">= 0.5.0"
-  :description "The Rosé Pine theme pack for bedit — Main, Moon, and Dawn in one plugin (:enhances bedit)."
+  :description
+    "The Rosé Pine theme pack for bedit — Main, Moon, and Dawn in one plugin (:enhances bedit)."
   :repository "https://github.com/broodlang/bedit-theme-rose-pine"
   :enhances {bedit ">= 0.1"}
   :source-paths ["src"])
