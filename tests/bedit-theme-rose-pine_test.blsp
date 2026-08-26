@@ -4,16 +4,20 @@
   (:use bedit-theme-rose-pine))
 
 (def *roles*
-  [:base :mantle :surface0 :surface1 :surface2 :overlay0 :overlay1
-    :text :subtext :blue :mauve :green :yellow :peach :red :teal])
+  [:base
+    :mantle :surface0 :surface1 :surface2 :overlay0 :overlay1 :text :subtext :blue :mauve
+    :green :yellow :peach :red :teal])
 
 (defn hex6? (s)
-  (and (string? s) (= (count s) 7) (= (string/char-at s 0) "#")
+  (and (string? s)
+    (= (count s) 7)
+    (= (string/char-at s 0) "#")
     (every? (fn (i) (>= (index-of "0123456789abcdefABCDEF" (string/char-at s i)) 0)) (range 1 7))))
 
 (describe "bedit-plugin — a three-theme pack"
   (test "contributes all three Rosé Pine variants"
-    (assert= (vec (map :name (:themes (bedit-plugin)))) ["Rosé Pine" "Rosé Pine Moon" "Rosé Pine Dawn"]))
+    (assert= (vec (map :name (:themes (bedit-plugin))))
+      ["Rosé Pine" "Rosé Pine Moon" "Rosé Pine Dawn"]))
   (test "every variant's palette covers bedit's 16 roles with hex colours"
     (doseq (theme (:themes (bedit-plugin)))
       (doseq (role *roles*)
