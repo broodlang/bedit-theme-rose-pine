@@ -4,10 +4,10 @@
 ;; three appear in M-x theme-select at once. Pure data.
 (project
   :name "bedit-theme-rose-pine"
-  :version "0.1.2"
-  :brood ">= 0.5.0"
+  :version "0.2.0"
+  :brood ">= 0.13.0"
   :description
     "The Rosé Pine theme pack for bedit — Main, Moon, and Dawn in one plugin (:enhances bedit)."
   :repository "https://github.com/broodlang/bedit-theme-rose-pine"
-  :enhances {bedit ">= 0.1"}
+  :enhances {bedit ">= 0.3"}
   :source-paths ["src"])
